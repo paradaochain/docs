@@ -76,7 +76,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="voting_power.html"><strong aria-hidden="true">1.1.</strong> Contribution based Voting Power</a></li><li class="chapter-item expanded "><a href="prediction_market.html"><strong aria-hidden="true">1.2.</strong> Engagement by Prediction Markets</a></li><li class="chapter-item expanded "><a href="dao_type.html"><strong aria-hidden="true">1.3.</strong> Dao Types</a></li><li class="chapter-item expanded "><a href="support_with_staking.html"><strong aria-hidden="true">1.4.</strong> (Coming Soon) support by staking</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="voting_power.html"><strong aria-hidden="true">1.1.</strong> Contribution based Voting Power</a></li><li class="chapter-item expanded "><a href="prediction_market.html"><strong aria-hidden="true">1.2.</strong> Engagement by Prediction Markets</a></li><li class="chapter-item expanded "><a href="dao_type.html"><strong aria-hidden="true">1.3.</strong> Dao Types</a></li><li class="chapter-item expanded "><a href="support_with_staking.html"><strong aria-hidden="true">1.4.</strong> Coming Soon - support by staking</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -151,15 +151,14 @@ This ensures that ParaDAO continues to provide useful features to support the co
 <ul>
 <li><a href="./voting_power.html">Contribution based Voting Power</a></li>
 <li><a href="./prediction_market.html">Engagement by Prediction Markets</a></li>
-<li><a href="./dao_type.html">Dao Types</a></li>
+<li><a href="./dao_type.html">Out of the box Dao Types</a></li>
 <li><a href="./support_with_staking.html">(Coming Soon) support by staking</a></li>
 </ul>
 <h2 id="components-current"><a class="header" href="#components-current">Components (Current)</a></h2>
 <ul>
-<li>A parachain node with the <code>pallet-contract</code> to host the set of smart contracts for for DAO creation</li>
-<li>A relay chain node to simulate staking of relay chain native tokens</li>
-<li>Frontend allow users to create DAOs easily, allow DAO members to do proposals, votes, etc</li>
-<li>integration with Zeigeist sdk</li>
+<li>A <a href="https://github.com/paradaochain/chain">parachain node</a> with the <code>pallet-contract</code> to host the set of <a href="https://github.com/paradaochain/chain/tree/main/contracts">smart contracts</a> for DAO creation</li>
+<li>A relay chain node to simulate communications with the Relay Chain and other parachains</li>
+<li>A <a href="https://github.com/paradaochain/paradao-ui">frontend</a> to allow users to create DAOs easily, allow DAO members to do proposals, votes, and integration with the Zeigeist SDK</li>
 </ul>
 <h3 id="why-ink"><a class="header" href="#why-ink">Why Ink!</a></h3>
 <p>We have use Ink! because it was important for this set of tools to be easily deployable on different
@@ -190,26 +189,35 @@ it becomes easier to prevent sybil attack on DAO voting that is based on contrib
 cannot just use many accounts to gain the same amount of voting power as someone who has contributed).</p>
 <p>TODO: links in code</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="prediction-market-for-daos"><a class="header" href="#prediction-market-for-daos">Prediction Market for DAOs</a></h1>
-<p>By providing variety of voting power does not automatically increase engagement,
+<p>By providing variety of voting power calculation mechanisms does not automatically increase engagement,
 ensure a great voting turnout,
 or cover all decisions that needs to be made by DAOs.</p>
 <p>ParaDAO leverages prediction markets to encourage participation in different forms.</p>
 <h2 id="voting"><a class="header" href="#voting">Voting</a></h2>
-<p>For example,
-Early voters for a [binary prediction market] will have little certainty of the outcome and therefore if the vote automatically provide a position in a prediction market,
-early voters will be rewarded more than the late voters, when the outcome is more predictable.</p>
+<p>For example in a case of a <a href="./dao_type.html#collab">Collab</a> group,
+for a proposal that has binary outcome,
+i.e. <em>&quot;Propose to fund the next meet-up in Lisbon: Yes or No&quot;</em>,
+the DAO can create a prediction market and bootstrap the liquidity so that members of the DAO
+can buy Outcome Asset Tokens that aligns with the votes,
+this can encourage participation as members now have additional benefit to the passing of a proposal.</p>
+<p>The earlier members, or even non-members enter the prediction market,
+the more they are rewarded compare to late comers.</p>
 <h2 id="content-promotion"><a class="header" href="#content-promotion">Content promotion</a></h2>
-<p>For example, in the case of a <code>Fanclub</code>, there can be prediction market created by the DAO to</p>
-<p>[binary prediction market]:</p>
+<p>For example in the case of a <a href="./dao_type.html#fanclub">Fanclub</a>,
+there can be prediction market created by the star / members on content,
+i.e. <em>&quot;The new music video released in June 2022 has been shared more times than the one released in Jan 2022 by 31st Aug, 2022&quot;</em>.</p>
+<p>In this case,
+people might choose to purchase the Outcome Asset Tokens that align with which video they like more,
+it may also be the case that they help share the content to promote its circulation.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="community-types"><a class="header" href="#community-types">Community types</a></h1>
 <p>ParaDAO initially has composable options that are designed to support 2 types of DAOs</p>
-<h2 id="1-individual-support"><a class="header" href="#1-individual-support">1. Individual support</a></h2>
+<h2 id="fanclub"><a class="header" href="#fanclub">Fanclub</a></h2>
 <p>Inspired by Patreon / Substack,
 individuals who produces valuable contents may be supported by a community / fan base through a DAO.</p>
 <p>In this case,
-the DAO roles will only be the admin (content producer) and the supporters,
-where the supporters can participate in some polls / suggestion and the admin will have full control over the DAO treasury.</p>
-<h2 id="2-interest-groups"><a class="header" href="#2-interest-groups">2. Interest Groups</a></h2>
+the DAO roles will only be the Star(s) (content producers) and the supporters,
+where the supporters can participate in some polls / suggestion and the Star(s) will have full control over the DAO treasury.</p>
+<h2 id="collab"><a class="header" href="#collab">Collab</a></h2>
 <p>Inspired by meetup.com,
 a group of individuals may want to contribute to say a software code base, a meetup events etc.
 Some members of the DAO should be rewarded for their contributions,
@@ -221,8 +229,15 @@ It is also likely in this case that the treasury is managed by proposals and vot
 <div style="break-before: page; page-break-before: always;"></div><h1 id="support-with-staking"><a class="header" href="#support-with-staking">Support with Staking</a></h1>
 <p><em>Coming Soon</em></p>
 <h2 id="support-by-staking"><a class="header" href="#support-by-staking">Support by staking</a></h2>
-<p>In addition to direct donation , ParaDAO has a native currency that is minted according to a [bonding curve] where the rewards can be distributed to the staker or the DAO treasury.</p>
-<p>[bonding curve]:</p>
+<p>In addition to direct donation to a DAO,
+user might want to dedicate their staking rewards to a DAO instead.</p>
+<p>For example, Alice transfer DOTs from the relay chain to a parachain and joins a DAO,
+specifying that she wants to stake it.</p>
+<p>The DAO can then stake the tokens back on the relay chain and when Alice wants her DOTs back,
+the DAO unstakes and return to Alice when she provided, keeping the staking rewards.</p>
+<h3 id="paradao-reward-tokens"><a class="header" href="#paradao-reward-tokens">ParaDAO reward tokens</a></h3>
+<p>ParaDAO will integrate with a <a href="https://github.com/paritytech/ink/tree/master/examples/erc20">ERC20</a> token (with snapshots) that rewards DAOs who vote on ParaDAO proposals.
+These rewards will be transfered to the DAO treasuries.</p>
 
                     </main>
 
