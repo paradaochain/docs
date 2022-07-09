@@ -5,3 +5,4 @@
   - [Engagement by Prediction Markets](./prediction_market.md)
   - [Dao Types](./dao_type.md)
   - [Coming Soon - support by staking](./support_with_staking.md)
+- [Future Work](./future.md)
