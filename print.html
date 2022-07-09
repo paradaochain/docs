@@ -76,7 +76,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="voting_power.html"><strong aria-hidden="true">1.1.</strong> Contribution based Voting Power</a></li><li class="chapter-item expanded "><a href="prediction_market.html"><strong aria-hidden="true">1.2.</strong> Engagement by Prediction Markets</a></li><li class="chapter-item expanded "><a href="dao_type.html"><strong aria-hidden="true">1.3.</strong> Dao Types</a></li><li class="chapter-item expanded "><a href="support_with_staking.html"><strong aria-hidden="true">1.4.</strong> Coming Soon - support by staking</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="voting_power.html"><strong aria-hidden="true">1.1.</strong> Contribution based Voting Power</a></li><li class="chapter-item expanded "><a href="prediction_market.html"><strong aria-hidden="true">1.2.</strong> Engagement by Prediction Markets</a></li><li class="chapter-item expanded "><a href="dao_type.html"><strong aria-hidden="true">1.3.</strong> Dao Types</a></li><li class="chapter-item expanded "><a href="support_with_staking.html"><strong aria-hidden="true">1.4.</strong> Coming Soon - support by staking</a></li></ol></li><li class="chapter-item expanded "><a href="future.html"><strong aria-hidden="true">2.</strong> Future Work</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -152,7 +152,7 @@ This ensures that ParaDAO continues to provide useful features to support the co
 <li><a href="./voting_power.html">Contribution based Voting Power</a></li>
 <li><a href="./prediction_market.html">Engagement by Prediction Markets</a></li>
 <li><a href="./dao_type.html">Out of the box Dao Types</a></li>
-<li><a href="./support_with_staking.html">(Coming Soon) support by staking</a></li>
+<li><a href="./support_with_staking.html">Coming Soon - support by staking</a></li>
 </ul>
 <h2 id="components-current"><a class="header" href="#components-current">Components (Current)</a></h2>
 <ul>
@@ -250,6 +250,32 @@ the DAO unstakes and return to Alice when she provided, keeping the staking rewa
 <h3 id="paradao-reward-tokens"><a class="header" href="#paradao-reward-tokens">ParaDAO reward tokens</a></h3>
 <p>ParaDAO will integrate with a <a href="https://github.com/paritytech/ink/tree/master/examples/erc20">ERC20</a> token (with snapshots) that rewards DAOs who vote on ParaDAO proposals.
 These rewards will be transfered to the DAO treasuries.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="future-work"><a class="header" href="#future-work">Future Work</a></h1>
+<h2 id="improvments"><a class="header" href="#improvments">Improvments</a></h2>
+<h3 id="dao-roles"><a class="header" href="#dao-roles">DAO Roles</a></h3>
+<p>Currenty there are only 3 types of roles,
+ideally roles should be created when creating the DAO.
+Each role should map to specific permission(s) applicable.
+These permissions should also be flexible and members can vote to change them.</p>
+<h3 id="proposal"><a class="header" href="#proposal">Proposal</a></h3>
+<p>Proposal should have different expiration, threshold</p>
+<h3 id="voting-1"><a class="header" href="#voting-1">Voting</a></h3>
+<p>Staked tokens should contribute to the voter's weight,
+there should be a snapshot for the weight of the votes at time of proposal</p>
+<h3 id="zeigeist"><a class="header" href="#zeigeist">Zeigeist</a></h3>
+<p>We had spent significant about of time to try to connect ZG parachain to the relay chain in order to
+directly create Prediction Market with XCM.</p>
+<p>This was the steps we had researched, but were only able to get to Step 2.5 (Able to finalize 1 block)</p>
+<ol>
+<li>add zg docker to docker-compose</li>
+<li>register on relay chain</li>
+<li>zg produce blocks</li>
+<li>zg &lt;&gt; paradao channel</li>
+<li>add xcm-pallet to paraao chain to call zg to create PM, <a href="https://github.com/LaurentTrk/sublink-pallets/tree/main/xcm">example</a></li>
+<li>add the xcm-pallet to the paradao chain runtime + test</li>
+<li>add extension (a function and add it to the contract-pallet config in the runtime) to paradao chain to extend contract to call the xcm-pallet in step 5,
+<a href="https://github.com/LaurentTrk/sublink-pallets/blob/72ea5678c3fa0d493680cf101843d3d1d9897ceb/ink/contract/src/lib.rs">example</a></li>
+</ol>
 
                     </main>
 

@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Engagement by Prediction Markets - ParaDAO</title>
+        <title>Future Work - ParaDAO</title>
         <!-- Custom HTML head -->
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
@@ -75,7 +75,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="voting_power.html"><strong aria-hidden="true">1.1.</strong> Contribution based Voting Power</a></li><li class="chapter-item expanded "><a href="prediction_market.html" class="active"><strong aria-hidden="true">1.2.</strong> Engagement by Prediction Markets</a></li><li class="chapter-item expanded "><a href="dao_type.html"><strong aria-hidden="true">1.3.</strong> Dao Types</a></li><li class="chapter-item expanded "><a href="support_with_staking.html"><strong aria-hidden="true">1.4.</strong> Coming Soon - support by staking</a></li></ol></li><li class="chapter-item expanded "><a href="future.html"><strong aria-hidden="true">2.</strong> Future Work</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="voting_power.html"><strong aria-hidden="true">1.1.</strong> Contribution based Voting Power</a></li><li class="chapter-item expanded "><a href="prediction_market.html"><strong aria-hidden="true">1.2.</strong> Engagement by Prediction Markets</a></li><li class="chapter-item expanded "><a href="dao_type.html"><strong aria-hidden="true">1.3.</strong> Dao Types</a></li><li class="chapter-item expanded "><a href="support_with_staking.html"><strong aria-hidden="true">1.4.</strong> Coming Soon - support by staking</a></li></ol></li><li class="chapter-item expanded "><a href="future.html" class="active"><strong aria-hidden="true">2.</strong> Future Work</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -134,49 +134,39 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="prediction-market-for-daos"><a class="header" href="#prediction-market-for-daos">Prediction Market for DAOs</a></h1>
-<p>By providing variety of voting power calculation mechanisms does not automatically increase engagement,
-ensure a great voting turnout,
-or cover all decisions that needs to be made by DAOs.</p>
-<p>ParaDAO leverages prediction markets to encourage participation in different forms.</p>
-<h2 id="voting"><a class="header" href="#voting">Voting</a></h2>
-<p>To encourage voting, a Prediction Market overlaying proposals can improve the incentives for members to engage.</p>
-<p>For example,
-let's say there are 2 active proposals for funding from the treasury with the purpose of increasing DAO treasury,</p>
+                        <h1 id="future-work"><a class="header" href="#future-work">Future Work</a></h1>
+<h2 id="improvments"><a class="header" href="#improvments">Improvments</a></h2>
+<h3 id="dao-roles"><a class="header" href="#dao-roles">DAO Roles</a></h3>
+<p>Currenty there are only 3 types of roles,
+ideally roles should be created when creating the DAO.
+Each role should map to specific permission(s) applicable.
+These permissions should also be flexible and members can vote to change them.</p>
+<h3 id="proposal"><a class="header" href="#proposal">Proposal</a></h3>
+<p>Proposal should have different expiration, threshold</p>
+<h3 id="voting"><a class="header" href="#voting">Voting</a></h3>
+<p>Staked tokens should contribute to the voter's weight,
+there should be a snapshot for the weight of the votes at time of proposal</p>
+<h3 id="zeigeist"><a class="header" href="#zeigeist">Zeigeist</a></h3>
+<p>We had spent significant about of time to try to connect ZG parachain to the relay chain in order to
+directly create Prediction Market with XCM.</p>
+<p>This was the steps we had researched, but were only able to get to Step 2.5 (Able to finalize 1 block)</p>
 <ol>
-<li>social media advertisement to increase members,</li>
-<li>provide liquidity with tokens in the DAO treasury,</li>
+<li>add zg docker to docker-compose</li>
+<li>register on relay chain</li>
+<li>zg produce blocks</li>
+<li>zg &lt;&gt; paradao channel</li>
+<li>add xcm-pallet to paraao chain to call zg to create PM, <a href="https://github.com/LaurentTrk/sublink-pallets/tree/main/xcm">example</a></li>
+<li>add the xcm-pallet to the paradao chain runtime + test</li>
+<li>add extension (a function and add it to the contract-pallet config in the runtime) to paradao chain to extend contract to call the xcm-pallet in step 5,
+<a href="https://github.com/LaurentTrk/sublink-pallets/blob/72ea5678c3fa0d493680cf101843d3d1d9897ceb/ink/contract/src/lib.rs">example</a></li>
 </ol>
-<p>The DAO can create a prediction market which has the same market opening times as the proposals with the question,</p>
-<blockquote>
-<p>&quot;Which strategy will likely bring the most revenue to the DAO treasury in 3 months?&quot;</p>
-</blockquote>
-<p>The Outcome Asset Tokens will then be <em>Strategy1</em>, <em>Strategy2</em>, <em>None</em>.</p>
-<p>A DAO member may decide to purchase <em>Strategy2</em>,
-believing that it will work to a certain degree.
-They would then vote <code>yes</code> to fund that proposal and <code>no</code> to not fund the other one.</p>
-<p>Similarly, if a member do not believe any of them will work,
-they can purchase the None OAT and vote <code>no</code> to all two proposals.</p>
-<p>The earlier the members or even non-members enter the prediction market,
-the more they are rewarded compare to late comers.
-They would also want to vote on the proposal to ensure their options will be passsed.</p>
-<h2 id="content-promotion"><a class="header" href="#content-promotion">Content promotion</a></h2>
-<p>For example in the case of a <a href="./dao_type.html#fanclub">Fanclub</a>,
-there can be prediction market created by the star / members on content,
-i.e. <em>&quot;The new music video released in June 2022 has been shared more times than the one released in Jan 2022 by 31st Aug, 2022&quot;</em>.</p>
-<p>In this case,
-people might choose to purchase the Outcome Asset Tokens that align with which video they like more,
-it may also be the case that they help share the content to promote its circulation.</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="voting_power.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="support_with_staking.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
-                            </a>
-                            <a rel="next" href="dao_type.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                                <i class="fa fa-angle-right"></i>
                             </a>
                         <div style="clear: both"></div>
                     </nav>
@@ -184,11 +174,8 @@ it may also be the case that they help share the content to promote its circulat
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="voting_power.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="support_with_staking.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
-                    </a>
-                    <a rel="next" href="dao_type.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                        <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
 
