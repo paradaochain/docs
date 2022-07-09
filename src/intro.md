@@ -17,7 +17,7 @@ Discover our features relating to:
 - [Contribution based Voting Power](./voting_power.md)
 - [Engagement by Prediction Markets](./prediction_market.md)
 - [Out of the box Dao Types](./dao_type.md)
-- [(Coming Soon) support by staking](./support_with_staking.md)
+- [Coming Soon - support by staking](./support_with_staking.md)
 
 ## Components (Current)
 
