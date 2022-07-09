@@ -16,15 +16,18 @@ Discover our features relating to:
 
 - [Contribution based Voting Power](./voting_power.md)
 - [Engagement by Prediction Markets](./prediction_market.md)
-- [Dao Types](./dao_type.md)
+- [Out of the box Dao Types](./dao_type.md)
 - [(Coming Soon) support by staking](./support_with_staking.md)
 
 ## Components (Current)
 
-- A parachain node with the `pallet-contract` to host the set of smart contracts for for DAO creation
-- A relay chain node to simulate staking of relay chain native tokens
-- Frontend allow users to create DAOs easily, allow DAO members to do proposals, votes, etc
-- integration with Zeigeist sdk
+- A [parachain node] with the `pallet-contract` to host the set of [smart contracts] for DAO creation
+- A relay chain node to simulate communications with the Relay Chain and other parachains
+- A [frontend] to allow users to create DAOs easily, allow DAO members to do proposals, votes, and integration with the Zeigeist SDK
+
+[parachain node]: https://github.com/paradaochain/chain
+[smart contracts]: https://github.com/paradaochain/chain/tree/main/contracts
+[frontend]: https://github.com/paradaochain/paradao-ui
 
 ### Why Ink!
 

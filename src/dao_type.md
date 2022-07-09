@@ -2,16 +2,16 @@
 
 ParaDAO initially has composable options that are designed to support 2 types of DAOs
 
-## 1. Individual support
+## Fanclub
 
 Inspired by Patreon / Substack,
 individuals who produces valuable contents may be supported by a community / fan base through a DAO.
 
 In this case,
-the DAO roles will only be the admin (content producer) and the supporters,
-where the supporters can participate in some polls / suggestion and the admin will have full control over the DAO treasury.
+the DAO roles will only be the Star(s) (content producers) and the supporters,
+where the supporters can participate in some polls / suggestion and the Star(s) will have full control over the DAO treasury.
 
-## 2. Interest Groups
+## Collab
 
 Inspired by meetup.com,
 a group of individuals may want to contribute to say a software code base, a meetup events etc.
