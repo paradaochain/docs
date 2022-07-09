@@ -8,15 +8,32 @@ ParaDAO leverages prediction markets to encourage participation in different for
 
 ## Voting
 
-For example in a case of a [Collab] group,
-for a proposal that has binary outcome,
-i.e. _"Propose to fund the next meet-up in Lisbon: Yes or No"_,
-the DAO can create a prediction market and bootstrap the liquidity so that members of the DAO
-can buy Outcome Asset Tokens that aligns with the votes,
-this can encourage participation as members now have additional benefit to the passing of a proposal.
+To encourage voting, a Prediction Market overlaying proposals can improve the incentives for members to engage.
 
-The earlier members, or even non-members enter the prediction market,
+For example,
+let's say there are 2 active proposals for funding from the treasury with the purpose of increasing DAO treasury,
+
+1. social media advertisement to increase members,
+2. provide liquidity with tokens in the DAO treasury,
+
+The DAO can create a prediction market which has the same market opening times as the proposals with the question,
+
+> "Which strategy will likely bring the most revenue to the DAO treasury in 3 months?"
+
+The Outcome Asset Tokens will then be _Strategy1_, _Strategy2_, _None_.
+
+A DAO member may decide to purchase _Strategy2_,
+believing that it will work to a certain degree.
+They would then vote `yes` to fund that proposal and `no` to not fund the other one.
+
+Similarly, if a member do not believe any of them will work,
+they can purchase the None OAT and vote `no` to all two proposals.
+
+The earlier the members or even non-members enter the prediction market,
 the more they are rewarded compare to late comers.
+They would also want to vote on the proposal to ensure their options will be passsed.
+
+[more than 2 outcomes]: https://docs.zeitgeist.pm/docs/learn/prediction-markets#markets-with-more-than-two-outcomes
 
 ## Content promotion
 
