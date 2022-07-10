@@ -24,6 +24,7 @@ Discover our features relating to:
 - A [parachain node] with the `pallet-contract` to host the set of [smart contracts] for DAO creation
 - A relay chain node to simulate communications with the Relay Chain and other parachains
 - A [frontend] to allow users to create DAOs easily, allow DAO members to do proposals, votes, and integration with the Zeigeist SDK
+- Managed IPFS node for storing metadata for DAOs and Prediction Market information in Proposals
 
 [parachain node]: https://github.com/paradaochain/chain
 [smart contracts]: https://github.com/paradaochain/chain/tree/main/contracts
