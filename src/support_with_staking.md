@@ -16,6 +16,6 @@ the DAO unstakes and return to Alice when she provided, keeping the staking rewa
 ### ParaDAO reward tokens
 
 ParaDAO will integrate with a [ERC20] token (with snapshots) that rewards DAOs who vote on ParaDAO proposals.
-These rewards will be transfered to the DAO treasuries.
+These rewards will be transferred to the DAO treasuries.
 
 [erc20]: https://github.com/paritytech/ink/tree/master/examples/erc20

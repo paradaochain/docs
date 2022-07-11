@@ -1,6 +1,6 @@
 # Community types
 
-ParaDAO initially has composable options that are designed to support 2 types of DAOs
+ParaDAO initially has default options that are designed to support 2 types of DAOs
 
 ## Fanclub
 
@@ -23,3 +23,5 @@ the DAO will have a selection of roles of which the users in each role may be ab
 It is also likely in this case that the treasury is managed by proposals and votes.
 
 ## 3. Customisable (Coming Soon)
+
+We want to provide user with a way to design their DAOs, the permissions and governance models.

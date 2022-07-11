@@ -31,7 +31,7 @@ they can purchase the None OAT and vote `no` to all two proposals.
 
 The earlier the members or even non-members enter the prediction market,
 the more they are rewarded compare to late comers.
-They would also want to vote on the proposal to ensure their options will be passsed.
+They would also want to vote on the proposal to ensure their options will be Passsed.
 
 [more than 2 outcomes]: https://docs.zeitgeist.pm/docs/learn/prediction-markets#markets-with-more-than-two-outcomes
 

@@ -14,10 +14,8 @@ voting power.
 As we move towards [decentralised identity] solutions with [verifiable credentials] that can be tied to
 onchain accounts,
 and projects that provide [identity aggregation services],
-it becomes easier to prevent sybil attack on DAO voting that is based on contribution. I.e. someone
+it becomes easier to prevent Sybil attack on DAO voting that is based on contribution. I.e. someone
 cannot just use many accounts to gain the same amount of voting power as someone who has contributed).
-
-TODO: links in code
 
 [identity aggregation services]: https://litentry.com/
 [verifiable credentials]: https://www.w3.org/TR/vc-data-model/

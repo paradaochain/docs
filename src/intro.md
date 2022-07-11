@@ -1,10 +1,10 @@
 # Introducing ParaDAO
 
-ParaDAO provides tools for communities with the same passion / shared interests to come together to organise amongst themselves to acheive a common goal.
+ParaDAO provides tools for communities with the same passion / shared interests to come together to organise amongst themselves to achieve a common goal.
 The decentralised application that allows communities to create a DAO easily with out of the box governance models for managing:
 
 - DAO treasury (moving of funds to certain purposes: host an event (offchain), staking / swapping (onchain))
-- DAO details (Updating some onchain /decentalised storage data of the DAO)
+- DAO details (Updating some onchain /decentralised storage data of the DAO)
 - Proxy execution ( Enable the DAO to take part in other DApps, for example joining / voting in
   another DAO )
 - Oracle for prediction market creation and referee
@@ -23,7 +23,7 @@ Discover our features relating to:
 
 - A [parachain node] with the `pallet-contract` to host the set of [smart contracts] for DAO creation
 - A relay chain node to simulate communications with the Relay Chain and other parachains
-- A [frontend] to allow users to create DAOs easily, allow DAO members to do proposals, votes, and integration with the Zeigeist SDK
+- A [frontend] to allow users to create DAOs easily, allow DAO members to do proposals, votes, and integration with the Zeitgeist SDK
 - Managed IPFS node for storing metadata for DAOs and Prediction Market information in Proposals
 
 [parachain node]: https://github.com/paradaochain/chain
@@ -35,12 +35,12 @@ Discover our features relating to:
 We have use Ink! because it was important for this set of tools to be easily deployable on different
 parachains.
 
-ParaDao is a tool to allow people to collaborate in the most convient way,
+ParaDao is a tool to allow people to collaborate in the most convenient way,
 and would like to be available for any chain that supports the substrate's smart contracts.
 
 ## Inspiration
 
-This project is heavily inspired by many project that have been very well thoughtout.
+This project is heavily inspired by many project that have been very well thought out.
 We adapted our own twists as a PoC for the hackathon but we would like to credit:
 
 - daodao.zone

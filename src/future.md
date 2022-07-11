@@ -4,7 +4,7 @@
 
 ### DAO Roles
 
-Currenty there are only 3 types of roles,
+Currently there are only 3 types of roles,
 ideally roles should be created when creating the DAO.
 Each role should map to specific permission(s) applicable.
 These permissions should also be flexible and members can vote to change them.
@@ -18,7 +18,7 @@ Proposal should have different expiration, threshold
 Staked tokens should contribute to the voter's weight,
 there should be a snapshot for the weight of the votes at time of proposal
 
-### Zeigeist
+### Zeitgeist
 
 We had spent significant about of time to try to connect ZG parachain to the relay chain in order to
 directly create Prediction Market with XCM.
